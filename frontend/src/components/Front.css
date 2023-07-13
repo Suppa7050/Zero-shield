@@ -1,0 +1,38 @@
+#top {
+    padding-top: 5%;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+}
+
+
+.parent {
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.button1 {
+    width: 10%;
+    height: 50px;
+    margin-left: 87%;
+    margin-top: 43%;
+
+}
+.Footer{
+    margin-bottom: 0%;
+    padding-top: 2%;
+}
+
+.logo{
+    margin-left: 0%;
+    padding-right: 1%;
+}
+
+.here{
+    padding-top: 5%;
+    text-align: center;
+}

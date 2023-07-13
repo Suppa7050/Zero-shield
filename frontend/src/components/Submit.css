@@ -1,0 +1,49 @@
+/* Submit.css */
+.submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .result {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .result-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .result-attack {
+    font-weight: bold;
+  }
+  
+  .more-info-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .details {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 3px;
+    margin-top: 10px;
+  }
+  
+  .details-title {
+    font-weight: bold;
+  }
+  
+  .details-text {
+    margin-top: 5px;
+  }
+  
