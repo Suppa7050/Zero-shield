@@ -21,6 +21,7 @@ import GitCloneButton from "./components/GitCloneButton";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import React, { useState, useEffect } from "react";
 import Signup from "./components/Signup";
+import Signupp from "./components/Signupp";
 // import DownloadButton from "./components/Download";
 function App() {
   const [loginResult, setLoginResult] = useState(null);
@@ -45,8 +46,10 @@ function App() {
   return (
     <div>
     <Routes>
-      <Route path="/" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Title />  <Frontsection/><Trynow/> <Footer /></>} />
-      <Route path="/signup" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Signup/> <Footer /></>} />
+      <Route path="/" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Title />  <Frontsection/><Trynow user={loginResult}/> <Footer /></>} />
+      {/* <Route path="/signup" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Signup/> <Footer /></>} /> */}
+      <Route path="/signup" element={<> <Navbarpr /> <div style={{ display: 'flex', alignItems: 'center', justifyContent:'center' }}> <Signupp handlelogin={handleLogin}/> </div><Footer /></>} />
+
       <Route path="/scan" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Title /> <Here/> <FileUpload user={loginResult}/>  <Footer /> </>} />
       <Route path="/about" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Title />  <AboutUs/> <Footer /> </>} />
       <Route path="/description" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Title /> <Instructionss/> <Footer /> </>} />
@@ -65,8 +68,9 @@ function App() {
   return (
     <div>
     <Routes>
-      <Route path="/" element={<> <Navbarpr /> <Title />  <Frontsection/><Trynow/> <Footer /></>} />
-      <Route path="/signup" element={<> <Navbarpr /> <Signup handlelogin={handleLogin}/> <Footer /></>} />
+      <Route path="/" element={<> <Navbarpr /> <Title />  <Frontsection/><Trynow user={loginResult}/> <Footer /></>} />
+      {/* <Route path="/signup" element={<> <Navbarpr /> <Signup handlelogin={handleLogin}/> <Footer /></>} /> */}
+      <Route path="/signup" element={<> <Navbarpr /> <div style={{ display: 'flex', alignItems: 'center', justifyContent:'center' }}> <Signupp handlelogin={handleLogin}/> </div><Footer /></>} />
       <Route path="/scan" element={<> <Navbarpr /> <Title /> <Here/> <FileUpload/>  <Footer /> </>} />
       <Route path="/about" element={<> <Navbarpr /> <Title />  <AboutUs/> <Footer /> </>} />
       <Route path="/description" element={<> <Navbarpr /> <Title /> <Instructionss/> <Footer /> </>} />

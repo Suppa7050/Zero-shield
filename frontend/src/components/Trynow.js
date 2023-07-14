@@ -1,14 +1,16 @@
 import React from 'react';
-import "./Front.css"
-function Trynow()
-{
-    return (
-        <div className="text-center" >
-            <a href='scan'> <button class="fixed-top button1" >
-                Try now
-            </button></a>
-        </div>
-        
-    )
+import './Trynow.css';
+
+const Trynow = ({ user }) => {
+  const href = user ? '/scan' : '/signup';
+
+  return (
+    <div className="trynow-container">
+      <a href={href} className="trynow-button">
+        Try now
+      </a>
+    </div>
+  );
 };
-export default Trynow; 
+
+export default Trynow;

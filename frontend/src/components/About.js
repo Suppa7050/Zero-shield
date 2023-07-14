@@ -31,7 +31,7 @@ const AboutUs = () => {
 
                 <div className="contact-info">
                     <h3 className='about-subtitle'>Contact Us</h3>
-                    <p>Have questions or need assistance? Our friendly support team is here to help. Reach out to us at [Contact Email/Phone Number], and we'll be happy to assist you.</p>
+                    <p>Have questions or need assistance? Our friendly support team is here to help. Reach out to us at abhijeet.veeraboina@gmail.com(or)9848026364, and we'll be happy to assist you.</p>
                 </div>
             </div>
         </div>

@@ -68,11 +68,11 @@ const Navbarpr = ({ handleLogout, user }) => {
                     className="dropdown-menu"
                     aria-labelledby="dropdownMenuButton"
                   >
-                    <li>
+                    {/* <li>
                       <a className="dropdown-item" href="#">
                         Profile
                       </a>
-                    </li>
+                    </li> */}
                     <li>
                       <a
                         className="dropdown-item"
