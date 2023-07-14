@@ -99,8 +99,8 @@ async def upload_file(file: UploadFile = File(...), username: str = Form(...)):
 
     df.dropna(inplace=True)
     df = df[~df.isin([np.nan, np.inf, -np.inf]).any(axis=1)]
-    colsfromindex = [' Subflow Bwd Bytes',' ECE Flag Count',' Fwd URG Flags',' Active Max','Init_Win_bytes_forward',' act_data_pkt_fwd',' Bwd Header Length',' min_seg_size_forward',' Fwd Header Length', ' Label']
-    df.drop(colsfromindex, axis=1, inplace=True)
+    # colsfromindex = [' Subflow Bwd Bytes',' ECE Flag Count',' Fwd URG Flags',' Active Max','Init_Win_bytes_forward',' act_data_pkt_fwd',' Bwd Header Length',' min_seg_size_forward',' Fwd Header Length', ' Label']
+    # df.drop(colsfromindex, axis=1, inplace=True)
 
     print("processing")
     # Replace infinite and large values with NaN

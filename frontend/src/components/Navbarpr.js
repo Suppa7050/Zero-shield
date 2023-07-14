@@ -20,14 +20,14 @@ const Navbarpr = ({ handleLogout, user }) => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-light navbar-light">
+    <nav className="navbar navbar-expand-lg custom-navbar">
       <div className="container-fluid">
         <a href="/" className="logo">
           <img
             src="https://i.ibb.co/SrWrG53/bd4122c30b46f86ac77b03c1d3aea208.jpg"
             alt="LOGO"
-            height="40px"
-            width="40px"
+            height="30px"
+            width="30px"
           />
         </a>
         <a className="navbar-brand" href="#">

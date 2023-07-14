@@ -22,6 +22,12 @@
     margin-top: 43%;
 
 }
+
+.custom-navbar {
+    height: 50px; /* Adjust the height value as desired */
+    color: rgb(205, 142, 15);
+  }
+  
 .Footer {
     padding-top: 10em;
     text-align: center;

@@ -7,7 +7,7 @@ import Navbarpr from "./components/Navbarpr";
 import { Carousel } from "bootstrap";
 import Carousell from "./components/Carousell";
 import Footer from "./components/Footer";
-import Pic from "./components/Pic";
+// import Pic from "./components/Pic";
 import DragDropFile from "./components/DragDropFile"
 import Here from "./components/Here";
 import Trynow from "./components/Trynow";
@@ -45,7 +45,7 @@ function App() {
   return (
     <div>
     <Routes>
-      <Route path="/" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Title /> <Pic/> <Frontsection/><Trynow/> <Footer /></>} />
+      <Route path="/" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Title />  <Frontsection/><Trynow/> <Footer /></>} />
       <Route path="/signup" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Signup/> <Footer /></>} />
       <Route path="/scan" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Title /> <Here/> <FileUpload user={loginResult}/>  <Footer /> </>} />
       <Route path="/about" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Title />  <AboutUs/> <Footer /> </>} />
@@ -65,7 +65,7 @@ function App() {
   return (
     <div>
     <Routes>
-      <Route path="/" element={<> <Navbarpr /> <Title /> <Pic/> <Frontsection/><Trynow/> <Footer /></>} />
+      <Route path="/" element={<> <Navbarpr /> <Title />  <Frontsection/><Trynow/> <Footer /></>} />
       <Route path="/signup" element={<> <Navbarpr /> <Signup handlelogin={handleLogin}/> <Footer /></>} />
       <Route path="/scan" element={<> <Navbarpr /> <Title /> <Here/> <FileUpload/>  <Footer /> </>} />
       <Route path="/about" element={<> <Navbarpr /> <Title />  <AboutUs/> <Footer /> </>} />
