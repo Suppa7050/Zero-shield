@@ -17,9 +17,9 @@ const Footer = () => {
               <p>Email: detectivezeroday@gmail.com</p>
               <p>Phone: 6300569470</p>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 " >
               <h3>Follow Us</h3>
-              <div className="d-flex">
+              <div >
                 {/* <a href="#">
                   <i className="fa fa-facebook mr-3"></i>{" "}
                 </a>
@@ -31,7 +31,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-instagram"></i> detectivezeroday
+                  <i className="fab fa-instagram">detectivezeroday</i> 
                 </a>
               </div>
             </div>
