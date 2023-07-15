@@ -46,7 +46,7 @@ function App() {
   return (
     <div>
     <Routes>
-      <Route path="/" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Title />  <Frontsection/><Trynow user={loginResult}/> <Footer /></>} />
+      <Route path="/" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Title />  <Frontsection user={loginResult}/><Trynow user={loginResult}/> <Footer /></>} />
       {/* <Route path="/signup" element={<> <Navbarpr user={loginResult} handleLogout={handleLogout} /> <Signup/> <Footer /></>} /> */}
       <Route path="/signup" element={<> <Navbarpr /> <div style={{ display: 'flex', alignItems: 'center', justifyContent:'center' }}> <Signupp handlelogin={handleLogin}/> </div><Footer /></>} />
 
@@ -68,7 +68,7 @@ function App() {
   return (
     <div>
     <Routes>
-      <Route path="/" element={<> <Navbarpr /> <Title />  <Frontsection/><Trynow user={loginResult}/> <Footer /></>} />
+      <Route path="/" element={<> <Navbarpr /> <Title />  <Frontsection user={loginResult}/><Trynow user={loginResult}/> <Footer /></>} />
       {/* <Route path="/signup" element={<> <Navbarpr /> <Signup handlelogin={handleLogin}/> <Footer /></>} /> */}
       <Route path="/signup" element={<> <Navbarpr /> <div style={{ display: 'flex', alignItems: 'center', justifyContent:'center' }}> <Signupp handlelogin={handleLogin}/> </div><Footer /></>} />
       <Route path="/scan" element={<> <Navbarpr /> <Title /> <Here/> <FileUpload/>  <Footer /> </>} />

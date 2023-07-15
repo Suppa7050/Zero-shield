@@ -1,7 +1,7 @@
 import React from "react";
 import "./Frontsection.css";
-const Frontsection = (user) => {
-  const href = user ? "/scan" : "/signup";
+const Frontsection = ({ user }) => {
+  const href1 = user ? "/scan" : "/signup";
   return (
     <div className="sunny">
       <section className="section1">
@@ -13,7 +13,7 @@ const Frontsection = (user) => {
           <p className="section1-description">We've got you covered!</p>
           <p>Check if your network is malicious:</p>
           <div className="trynow-container1">
-            <a href={href} className="trynow-button1">
+            <a href={href1} className="trynow-button1">
               Try now
             </a>
           </div>
