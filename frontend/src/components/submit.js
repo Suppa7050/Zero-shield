@@ -26,7 +26,7 @@ const Submit = () => {
   const toggleDetails = async () => {
     if (res && res.attack !== 'Zero-day' && !res.info) {
       try {
-        const response = await fetch('/moreinfo', {
+        const response = await fetch('https://zero-backend.onrender.com/moreinfo', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

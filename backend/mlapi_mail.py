@@ -200,6 +200,37 @@ Detective Zero-day."""
     except Exception as e:
         print(f"Failed to send email. Error: {str(e)}")
 
+
+def get_chat_gpt(attack):
+    openai.api_key = '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'
+
+    # Define your chat function
+    def chat_with_gpt(prompt):
+        response = openai.Completion.create(
+            engine='text-davinci-003',  # Specify the GPT-3.5 engine
+            prompt=prompt,
+            max_tokens=200,  # Adjust the response length as needed
+            n=1,  # Number of responses to generate
+            stop=None,  # Optional stopping criteria
+            temperature=0.7,  # Controls the randomness of the output
+            timeout=10,  # Maximum time (in seconds) to wait for a response
+        )
+
+        if 'choices' in response and len(response['choices']) > 0:
+            return response['choices'][0]['text'].strip()
+        else:
+            return None
+
+    # Example usage
+    prompt = f"Give information of the attack {attack} and suggestions"
+    response = chat_with_gpt(prompt)
+    return response
+
+@app.post("/moreinfo")
+async def more_info(attack: str):
+    response = get_chat_gpt(attack)
+    return {"info": response}
+
 # Run the FastAPI server
 if __name__ == "__main__":
     import uvicorn
