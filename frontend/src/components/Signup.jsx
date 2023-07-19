@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import './signup.css';
-// import Navbar from './navbar';
-// import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-function Signup({handlelogin}) {
+
+function Signup({ handlelogin }) {
   const navigate = useNavigate();
   const [signupEmail, setSignupEmail] = useState('');
   const [signupPassword, setSignupPassword] = useState('');
@@ -12,6 +11,15 @@ function Signup({handlelogin}) {
 
   const handleSignupSubmit = async (event) => {
     event.preventDefault();
+    if (!signupEmail.endsWith('@gmail.com')) {
+      alert('Email must end with "@gmail.com"');
+      return;
+    }
+    if (signupPassword === '') {
+      alert('Password cannot be empty');
+      return;
+    }
+
     try {
       const response = await fetch('https://zero-backend.onrender.com/register', {
         method: 'POST',
@@ -38,7 +46,15 @@ function Signup({handlelogin}) {
 
   const handleLoginSubmit = async (event) => {
     event.preventDefault();
-  
+    if (!loginEmail.endsWith('@gmail.com')) {
+      alert('Email must end with "@gmail.com"');
+      return;
+    }
+    if (loginPassword === '') {
+      alert('Password cannot be empty');
+      return;
+    }
+
     try {
       const response = await fetch('https://zero-backend.onrender.com/login', {
         method: 'POST',
@@ -54,10 +70,10 @@ function Signup({handlelogin}) {
       if (data.message === true) {
         console.log(data);
         handlelogin(data);
-        alert("Login Successful.")
-         navigate('/scan');
+        alert("Login Successful.");
+        navigate('/scan');
       } else {
-        alert("Invalid credentials")
+        alert("Invalid credentials");
         console.error('Login failed:', data.message);
       }
     } catch (error) {
@@ -67,7 +83,6 @@ function Signup({handlelogin}) {
 
   return (
     <div>
-      {/* <Navbar /> */}
       <div className='handleboth'>
         <div className='register'>
           <form className='registerform' onSubmit={handleSignupSubmit}>
