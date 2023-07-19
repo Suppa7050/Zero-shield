@@ -13,7 +13,7 @@ from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
 import os
 from fastapi.responses import FileResponse
-
+import openai 
 app = FastAPI()
 load_dotenv()
 
@@ -202,7 +202,7 @@ Detective Zero-day."""
 
 
 def get_chat_gpt(attack):
-    openai.api_key = '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'
+    openai.api_key = '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'
 
     # Define your chat function
     def chat_with_gpt(prompt):
