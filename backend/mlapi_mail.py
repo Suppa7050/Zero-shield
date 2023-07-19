@@ -202,7 +202,7 @@ Detective Zero-day."""
 
 
 def get_chat_gpt(attack):
-    openai.api_key = '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'
+    openai.api_key = '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'
 
     # Define your chat function
     def chat_with_gpt(prompt):
