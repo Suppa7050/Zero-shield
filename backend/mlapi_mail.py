@@ -24,7 +24,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+api_key = os.getenv("OPENAI_API_KEY")
 # MongoDB Atlas connection details
 mongodb_url = os.getenv("MONGODB_URL")
 client = MongoClient(mongodb_url)
@@ -202,7 +202,11 @@ Detective Zero-day."""
 
 
 def get_chat_gpt(attack):
-    openai.api_key = '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'
+    
+
+# Now you can use the API key in your OpenAI calls
+    openai.api_key = api_key
+    # openai.api_key = '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'
 
     # Define your chat function
     def chat_with_gpt(prompt):
