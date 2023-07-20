@@ -57,8 +57,8 @@ const Submit = () => {
                   </button>
                   {showDetails && (
                     <div className="details">
-                      <p className="details-title">Additional Details:</p>
-                      <p className="details-text">{res.info}</p>
+                      {/* <p className="details-title">Additional Details:</p> */}
+                      {/* <p className="details-text">{res.info}</p> */}
                     </div>
                   )}
                 </>
