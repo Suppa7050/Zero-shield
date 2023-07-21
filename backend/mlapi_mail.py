@@ -205,7 +205,7 @@ def get_chat_gpt(attack):
     
 
 # Now you can use the API key in your OpenAI calls
-    openai.api_key = api_key
+    openai.api_key = "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"
     # openai.api_key = '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'
 
     # Define your chat function

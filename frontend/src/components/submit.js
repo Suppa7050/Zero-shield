@@ -26,7 +26,7 @@ const Submit = () => {
   const toggleDetails = async () => {
     if (res && res.attack !== 'Zero-day' && !res.info) {
       try {
-        const response = await fetch('https://zero-backend.onrender.com/moreinfo', {
+        const response = await fetch('http://127.0.0.1:8000/moreinfo', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -52,9 +52,9 @@ const Submit = () => {
               {res.attack !== 'Zero-day' && (
                 <>
                   <p className="result-attack">{res.attack}</p>
-                  <button className="more-info-button" onClick={toggleDetails}>
+                  {/* <button className="more-info-button" onClick={toggleDetails}>
                     More Info
-                  </button>
+                  </button> */}
                   {showDetails && (
                     <div className="details">
                       {/* <p className="details-title">Additional Details:</p> */}
